@@ -14,19 +14,26 @@
 # limitations under the License.
 #
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/r8q/device.mk)
-
 # Inherit from the 64 bit configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Fingerprint
+TARGET_HAS_UDPFS := true
+
+# Wifi
+TARGET_HAS_QCACLD_WIFI := true
+
+# Inherit device configuration
+$(call inherit-product, device/samsung/r8q/device.mk)
+
 # Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
@@ -36,8 +43,10 @@ PRODUCT_DEVICE := r8q
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G780G
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="r8qxx-user 11 RP1A.200720.012 G780GXXSCEXI1 release-keys" \
 
 # Vendor fingerprint
-BUILD_FINGERPRINT := "samsung/r8qxx/r8q:11/RP1A.200720.012/G780GXXSAEXE5:user/release-keys"
-PRIVATE_BUILD_DESC := "r8qxx-user 11 RP1A.200720.012 G780GXXSAEXE5 release-keys"
+BUILD_FINGERPRINT := "samsung/r8qxx/r8q:11/RP1A.200720.012/G780GXXSCEXI1:user/release-keys"
