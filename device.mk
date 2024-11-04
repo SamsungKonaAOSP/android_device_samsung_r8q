@@ -36,5 +36,12 @@ PRODUCT_PACKAGES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.r8q
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 # Inherit r8q blobs
 $(call inherit-product, vendor/samsung/r8q/r8q-vendor.mk)
