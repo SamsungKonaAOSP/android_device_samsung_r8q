@@ -22,7 +22,6 @@ vendor/lib64/libaudcal.so
 
 # Audio
 vendor/lib/hw/audio.primary.kona.so:vendor/lib/hw/audio.primary.r8q.so;FIX_SONAME
-vendor/lib/libbatterylistener.so
 
 # Camera
 vendor/lib64/K32QS_libTsAeFront.so
@@ -98,7 +97,7 @@ vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.unihal.default.so
-vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/hw/com.qti.chi.override.so;DISABLE_CHECKELF
 vendor/lib64/libBeauty_v4.camera.samsung.so
 vendor/lib64/libBlurDetectionDeepLearning.camera.samsung.so
 vendor/lib64/libDualCamBokehCapture.camera.samsung.so
@@ -107,7 +106,6 @@ vendor/lib64/libFacePreProcessing.camera.samsung.so
 vendor/lib64/libFace_Landmark_API.camera.samsung.so
 vendor/lib64/libHprFace_GAE_api.camera.samsung.so
 vendor/lib64/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
-vendor/lib64/libHumanSegVideoModel_Vendor.so
 vendor/lib64/libIMUSensor.so
 vendor/lib64/libImageFormatConverter.so
 vendor/lib64/libSingleTakeBlurDetection.uniplugin@1.0.so
@@ -119,7 +117,6 @@ vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxncs.so
 vendor/lib64/libdualcam_refocus_image.so
-vendor/lib64/libdualcam_refocus_video.so
 vendor/lib64/libevent_finder.uniplugin@1.0.so
 vendor/lib64/libface_landmark.arcsoft.so
 vendor/lib64/libformatConverter.unifunc.so
